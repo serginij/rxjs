@@ -1,9 +1,7 @@
-import { of, from } from 'rxjs';
+import { ApiFetcher } from './api-fetcher';
 
-const o = of(5) // Promise.resolve(5)
-
-o.subscribe({
+ApiFetcher.subscribe({
   next: (value: any) => console.log('Next:', value),
   complete: () => console.log('Complete!'),
-  error: (error) => console.log('Error!', error)
-})
+  error: (error) => console.log('Error!', error),
+});
